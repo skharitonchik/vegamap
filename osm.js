@@ -19,7 +19,7 @@ function popupText(currentGeo, currentMarker) {
         }
 
         if (currentGeo.phones && currentGeo.phones.length > 0) {
-            currentGeo.phones.forEach(p => baseText += `${p}  `);
+            currentGeo.phones.forEach(p => baseText += `${p}; `);
             baseText += '<br>';
         }
 
