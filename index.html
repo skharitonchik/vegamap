@@ -4,25 +4,47 @@
     <title>Vegamap minsk</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-          crossorigin=""/>
 
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-            crossorigin=""></script>
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+
+    <link rel="stylesheet" href="leaflet/leaflet.css"/>
+    <script src="leaflet/leaflet.js"></script>
+
     <style type="text/css">
+        .wrapper {
+            display: grid;
+            grid-template-areas: ". h  ." ". m  .";
+            grid-gap: 5px;
+            grid-template-columns: 25px 1fr 25px;
+        }
+
         #vegamap {
-            width: 90%;
+            grid-area: m;
+            width: 100%;
             height: 500px;
             margin: 0;
         }
+
+        header {
+            grid-area: h;
+            text-align: center;
+        }
+
+        .vegamap-title {
+            font-family: 'Charm';
+        }
+
     </style>
     <script src="markers.js"></script>
     <script src="osm.js"></script>
 </head>
 <body>
-<div id='vegamap'></div>
+<div class="wrapper">
+    <header>
+        <h2 class="vegamap-title">VegaMap</h2>
+        <h4>Minsk</h4>
+    </header>
+    <div id='vegamap'></div>
+</div>
 </body>
 </html>
