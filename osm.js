@@ -40,11 +40,12 @@ function init() {
     };
     const MAP_ID = 'vegamap';
 
+    const DEFAULT_ZOOM = 12;
     const MAP_LAYER = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
 
-    let map = L.map(MAP_ID).setView([MINSK_CENTER.latitude, MINSK_CENTER.longitude], 12);
+    let map = L.map(MAP_ID).setView([MINSK_CENTER.latitude, MINSK_CENTER.longitude], DEFAULT_ZOOM);
 
     L.tileLayer(MAP_LAYER, {attribution}).addTo(map);
 
