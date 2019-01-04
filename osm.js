@@ -1,7 +1,18 @@
 function placeMarkers(map) {
+    let icon = L.icon({
+        iconUrl: 'images/marker-icon-green.png',
+        shadowUrl: 'leaflet/images/marker-shadow.png',
+
+        iconSize:     [25, 41], // size of the icon
+        shadowSize:   [41, 41], // size of the shadow
+        iconAnchor:   [15, 40], // point of the icon which will correspond to marker's location
+        shadowAnchor: [15, 40],  // the same for the shadow
+        popupAnchor:  [-3, -40] // point from which the popup should open relative to the iconAnchor
+    });
+
     MARKERS.forEach(m => {
         if (m.geo && m.geo.length > 0) {
-            m.geo.forEach(g => L.marker([g.latitude, g.longitude]).addTo(map).bindPopup(popupText(g, m)));
+            m.geo.forEach(g => L.marker([g.latitude, g.longitude], { icon }).addTo(map).bindPopup(popupText(g, m)));
         }
     });
 }
