@@ -39,7 +39,7 @@ let MARKERS = [{
         timeOfWork: '11:00–19:00',
         phones: ['+375 (29) 649-17-86'],
     }],
-    links: ['https://www.instagram.com/vegaburger']
+    links: ['https://www.instagram.com/vegaburger', 'https://vk.com/vegaburger']
 }, {
     name: 'Monkey Food',
     geo: [{
