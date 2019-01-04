@@ -7,7 +7,7 @@ function placeMarkers(map) {
 }
 
 function popupText(currentGeo, currentMarker) {
-    let baseText = `<span class="geo-marker"><span class="geo-name">${currentMarker.name}</span> <br>`;
+    let baseText = `<span class="geo-marker-popup"><span class="geo-name">${currentMarker.name}</span> <br>`;
 
     try {
         if (currentGeo.address) {
