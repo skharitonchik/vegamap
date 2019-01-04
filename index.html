@@ -13,7 +13,7 @@
     <style type="text/css">
         .wrapper {
             display: grid;
-            grid-template-areas: ". h  ." ". m  .";
+            grid-template-areas: ". h  ." ". m  ." ". i .";
             grid-gap: 5px;
             grid-template-columns: 25px 1fr 25px;
         }
@@ -42,6 +42,9 @@
         .vegamap-legend-img {
             vertical-align: middle;
         }
+        .vegamap-markers-info {
+            grid-area: i;
+        }
     </style>
     <script src="markers.js"></script>
     <script src="osm.js"></script>
@@ -59,6 +62,7 @@
         </div>
     </header>
     <div id='vegamap'></div>
+    <div class='vegamap-markers-info'></div>
 </div>
 </body>
 </html>

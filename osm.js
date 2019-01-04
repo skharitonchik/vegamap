@@ -1,35 +1,9 @@
-function placeMarkers(map) {
-    let iconCafe = L.icon({
-        iconUrl: 'images/marker-icon-green.png',
-        shadowUrl: 'leaflet/images/marker-shadow.png',
-
-        iconSize:     [25, 41], // size of the icon
-        shadowSize:   [41, 41], // size of the shadow
-        iconAnchor:   [15, 40], // point of the icon which will correspond to marker's location
-        shadowAnchor: [15, 40],  // the same for the shadow
-        popupAnchor:  [-3, -40] // point from which the popup should open relative to the iconAnchor
-    });
-
-    let iconShop = L.icon({
-        iconUrl: 'images/marker-icon-shop.png',
-        shadowUrl: 'leaflet/images/marker-shadow.png',
-
-        iconSize:     [25, 41], // size of the icon
-        shadowSize:   [41, 41], // size of the shadow
-        iconAnchor:   [15, 40], // point of the icon which will correspond to marker's location
-        shadowAnchor: [15, 40],  // the same for the shadow
-        popupAnchor:  [-3, -40] // point from which the popup should open relative to the iconAnchor
-    });
-
-    MARKERS.forEach(m => {
+function placeMarkers(map, markers, icon) {
+    markers.forEach(m => {
         if (m.geo && m.geo.length > 0) {
-            m.geo.forEach(g => L.marker([g.latitude, g.longitude], { icon: iconCafe }).addTo(map).bindPopup(popupText(g, m)));
-        }
-    });
-
-    SHOPS.forEach(s => {
-        if (s.geo && s.geo.length > 0) {
-            s.geo.forEach(g => L.marker([g.latitude, g.longitude], { icon: iconShop }).addTo(map).bindPopup(popupText(g, s)));
+            m.geo.forEach(g => L.marker([g.latitude, g.longitude], {icon})
+                .on('click', (e) => document.querySelectorAll('.vegamap-markers-info')[0].innerHTML = e.target._popup._content)
+                .addTo(map).bindPopup(popupText(g, m)));
         }
     });
 }
@@ -74,11 +48,24 @@ function init() {
     const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
 
+    let BaseVegaIcon = L.Icon.extend({
+        options: {
+            shadowUrl: 'leaflet/images/marker-shadow.png',
+
+            iconSize: [25, 41], // size of the icon
+            shadowSize: [41, 41], // size of the shadow
+            iconAnchor: [15, 40], // point of the icon which will correspond to marker's location
+            shadowAnchor: [15, 40],  // the same for the shadow
+            popupAnchor: [-3, -40] // point from which the popup should open relative to the iconAnchor
+        }
+    });
+
     let map = L.map(MAP_ID).setView([MINSK_CENTER.latitude, MINSK_CENTER.longitude], DEFAULT_ZOOM);
 
     L.tileLayer(MAP_LAYER, {attribution}).addTo(map);
 
-    placeMarkers(map);
+    placeMarkers(map, MARKERS, new BaseVegaIcon({iconUrl: 'images/marker-icon-green.png'}));
+    placeMarkers(map, SHOPS, new BaseVegaIcon({iconUrl: 'images/marker-icon-shop.png'}));
 }
 
 document.addEventListener('DOMContentLoaded', () => init());
