@@ -7,18 +7,19 @@ function placeMarkers(map) {
 }
 
 function popupText(currentGeo, currentMarker) {
-    let baseText = `${currentMarker.name} <br>`;
+    let baseText = `<span class="geo-marker"><span class="geo-name">${currentMarker.name}</span> <br>`;
 
     try {
         if (currentGeo.address) {
-            baseText += `${currentGeo.address}<br>`;
+            baseText += `<span class="geo-label-text">Адрес:</span> ${currentGeo.address}<br>`;
         }
 
         if (currentGeo.timeOfWork) {
-            baseText += `${currentGeo.timeOfWork}<br>`;
+            baseText += `<span class="geo-label-text">Время работы:</span> ${currentGeo.timeOfWork}<br>`;
         }
 
         if (currentGeo.phones && currentGeo.phones.length > 0) {
+            baseText += '<span class="geo-label-text">Телефоны:</span> ';
             currentGeo.phones.forEach(p => baseText += `${p}; `);
             baseText += '<br>';
         }
@@ -30,7 +31,7 @@ function popupText(currentGeo, currentMarker) {
         //silent
     }
 
-    return baseText;
+    return baseText += '</span>';
 }
 
 function init() {
