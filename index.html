@@ -10,44 +10,9 @@
     <link rel="stylesheet" href="leaflet/leaflet.css"/>
     <script src="leaflet/leaflet.js"></script>
 
-    <style type="text/css">
-        .wrapper {
-            display: grid;
-            grid-template-areas: ". h  ." ". m  ." ". i .";
-            grid-gap: 5px;
-            grid-template-columns: 25px 1fr 25px;
-        }
-
-        #vegamap {
-            grid-area: m;
-            width: 100%;
-            height: 500px;
-            margin: 0;
-        }
-
-        header {
-            grid-area: h;
-            text-align: center;
-        }
-
-        .vegamap-title {
-            font-family: 'Charm';
-        }
-
-        .vegamap-legend {
-            text-align: left;
-            padding-left: 50px;
-        }
-
-        .vegamap-legend-img {
-            vertical-align: middle;
-        }
-        .vegamap-markers-info {
-            grid-area: i;
-        }
-    </style>
-    <script src="markers.js"></script>
-    <script src="osm.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/markers.js"></script>
+    <script src="scripts/osm.js"></script>
 </head>
 <body>
 <div class="wrapper">

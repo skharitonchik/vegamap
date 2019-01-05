@@ -1,0 +1,34 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: ". h  ." ". m  ." ". i .";
+    grid-gap: 5px;
+    grid-template-columns: 25px 1fr 25px;
+}
+
+#vegamap {
+    grid-area: m;
+    width: 100%;
+    height: 500px;
+    margin: 0;
+}
+
+header {
+    grid-area: h;
+    text-align: center;
+}
+
+.vegamap-title {
+    font-family: 'Charm';
+}
+
+.vegamap-legend {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.vegamap-legend-img {
+    vertical-align: middle;
+}
+.vegamap-markers-info {
+    grid-area: i;
+}
