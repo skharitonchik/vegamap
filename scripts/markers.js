@@ -12,6 +12,7 @@
  links: ['']
  * @type {*[]}
  */
+//region Cafes and others foods
 let MARKERS = [{
     name: 'Супкультура',
     geo: [{
@@ -84,7 +85,9 @@ let MARKERS = [{
     }],
     links: ['https://vk.com/veggbar']
 }];
+//endregion
 
+//region Vega shops
 let SHOPS = [{
     name: 'Vegetus',
     geo: [{
@@ -112,4 +115,19 @@ let SHOPS = [{
         phones: ['+375 (29) 144-89-53', '+375 (33) 342-87-98'],
     }],
     links: ['http://vegetus.by']
+}, {
+    name: 'ECOkit',
+    geo: [{
+        latitude: 53.90559,
+        longitude: 27.56363,
+        address: 'ул. Купалы 23',
+        timeOfWork: 'Пн - Вс: 09.00-21.00',
+        phones: ['+375 (33) 646-18-19'],
+    }],
+    links: [
+        'http://www.ecokit.by/',
+        'https://www.instagram.com/ecokit.by/',
+        'https://telegram.me/ecokitby',
+        'https://vk.com/ecokit']
 }];
+//endregion
