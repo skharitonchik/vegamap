@@ -105,6 +105,19 @@ let MARKERS = [{
         phones: ['+375 (29) 123-13-21'],
     }],
     links: ['https://vk.com/veggbar']
+}, {
+    name: 'Vegan Pizza Minsk',
+    geo: [{
+        latitude: 53.9196,
+        longitude: 27.57369,
+        address: 'улица Веры Хоружей, 15',
+        timeOfWork: 'Ср-Вс: 15:00-21:00 Пн-Вт: выходной',
+        phones: ['+375 (29) 878-11-87'],
+    }],
+    links: [
+        'https://vegan-pizza-minsk.business.site',
+        'https://www.instagram.com/vegan.pizza.minsk'
+    ]
 }];
 //endregion
 
@@ -151,5 +164,15 @@ let SHOPS = [{
         'https://telegram.me/ecokitby',
         'https://vk.com/ecokit'
     ]
+}, {
+    name: 'Vegans BY',
+    geo: [{
+        latitude: 53.90397,
+        longitude: 27.55238,
+        address: 'ТЦ "Немига 3", эт. 3, пав. 23',
+        timeOfWork: 'Пн-Вс: 10:00 - 21:00 Обед 15:00 - 15:30;',
+        phones: ['+375 (29) 541-33-33', '+375 (44) 702-22-00'],
+    }],
+    links: ['https://vegans.by']
 }];
 //endregion
