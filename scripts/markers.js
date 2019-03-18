@@ -28,9 +28,11 @@ let MARKERS = [{
         timeOfWork: '10.00-20.00',
         phones: ['+375 (29) 176-01-01'],
     }],
-    links: ['https://www.instagram.com/soupculture.minsk/',
+    links: [
+        'https://www.instagram.com/soupculture.minsk/',
         'https://www.facebook.com/soupculture.by',
-        'https://vk.com/soupcultureby']
+        'https://vk.com/soupcultureby'
+    ]
 }, {
     name: 'VegaBurger',
     geo: [{
@@ -40,7 +42,11 @@ let MARKERS = [{
         timeOfWork: '11:00–19:00',
         phones: ['+375 (29) 649-17-86'],
     }],
-    links: ['https://www.instagram.com/vegaburger', 'https://vk.com/vegaburger', 'https://www.facebook.com/VegaBurgerMinsk/']
+    links: [
+        'https://www.instagram.com/vegaburger',
+        'https://vk.com/vegaburger',
+        'https://www.facebook.com/VegaBurgerMinsk'
+    ]
 }, {
     name: 'Monkey Food',
     geo: [{
@@ -48,9 +54,20 @@ let MARKERS = [{
         longitude: 27.58462,
         address: 'ул. Богдановича, 128а',
         timeOfWork: '11:00–22:00',
-        phones: ['+375 (33) 352-06-06', '+375 (29) 352-06-06'],
+        phones: ['+375 (29) 352-06-06'],
+    }, {
+            latitude: 53.88977,
+            longitude: 27.57446,
+            address: 'ул. Октябрьская, 16',
+            timeOfWork: '11:00–22:00',
+            phones: ['+375 (29) 352-06-06'],
     }],
-    links: ['https://www.instagram.com/monkey.food']
+    links: [
+        'http://monkeyfood.by',
+        'https://www.instagram.com/monkey.food',
+        'https://vk.com/monkeyfood',
+        'https://www.facebook.com/groups/MonkeyFood'
+    ]
 }, {
     name: 'OM NAMO',
     geo: [{
@@ -60,7 +77,8 @@ let MARKERS = [{
         timeOfWork: '11.00-23.00',
         phones: ['+375 (44) 764-78-86'],
     }],
-    links: ['https://omnamo.by/',
+    links: [
+        'https://omnamo.by/',
         'https://www.instagram.com/bistroomnamo/',
         'https://www.facebook.com/bistroomnamo',
         'https://vk.com/bistroomnamo']
@@ -73,7 +91,10 @@ let MARKERS = [{
         timeOfWork: '10:00–20:00',
         phones: ['+375 (29) 258-75-83'],
     }],
-    links: ['https://www.instagram.com/zhivoikrai/']
+    links: [
+        'https://www.instagram.com/zhivoikrai/',
+        'https://vk.com/zhivoi_krai'
+    ]
 }, {
     name: 'VEGGIE BAR',
     geo: [{
@@ -128,6 +149,7 @@ let SHOPS = [{
         'http://www.ecokit.by/',
         'https://www.instagram.com/ecokit.by/',
         'https://telegram.me/ecokitby',
-        'https://vk.com/ecokit']
+        'https://vk.com/ecokit'
+    ]
 }];
 //endregion
