@@ -38,7 +38,9 @@ let MARKERS = [{
     }],
     links: [
         'https://www.yellowslon.by',
-        'https://vk.com/yellowslon'
+        'https://vk.com/yellowslon',
+        'https://www.facebook.com/cafeyellowslonminsk/',
+        'https://www.instagram.com/cafe_yellow_slon/'
     ]
 },
     {
